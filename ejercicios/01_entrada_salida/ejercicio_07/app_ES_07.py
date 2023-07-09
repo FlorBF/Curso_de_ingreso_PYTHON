@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: florencia belén
+apellido: farías
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -49,17 +49,79 @@ class App(customtkinter.CTk):
         self.btn_dividir = customtkinter.CTkButton(master=self, text="Dividir", command=self.btn_dividir_on_click)
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
+       
+          #              SUMA
     def btn_sumar_on_click(self):
-        pass
+        #nombre = self.txt_nombre.get()
 
+        numero_uno_texto = self.txt_operador_a.get()
+        numero_uno_a_numero = int(numero_uno_texto)
+
+        numero_dos_texto = self.txt_operador_b.get()
+        numero_dos_a_numero = int(numero_dos_texto)
+
+        resultado = numero_uno_a_numero + numero_dos_a_numero
+        resultado_a_texto = str(resultado)
+
+        mensaje= "El resultado de la suma es: " + resultado_a_texto #el + está concatenando porque el resultado fue pasado a texto
+
+        alert(title="suma",message=mensaje)
+
+
+
+ #operadores aritmeticos:
+        #suma +
+        #resta -
+        #div /
+        #multip *
+        #% modulo= nos da el resto de una division
+        
+         #               RESTA
     def btn_restar_on_click(self):
-        pass
+        numero_uno_texto = self.txt_operador_a.get()
+        numero_uno_a_numero = int(numero_uno_texto)
 
+        numero_dos_texto = self.txt_operador_b.get()
+        numero_dos_a_numero= int(numero_dos_texto)
+
+        resultado = numero_uno_a_numero - numero_dos_a_numero
+
+        resultado_a_texto = str(resultado)
+        mensaje= "El resultado de la resta es: " + resultado_a_texto # este + se deja porque no esta "sumando" esta concatenando
+
+        alert(title="resta",message=mensaje)
+       # pass
+
+
+         #               MULTIPLICACIÓN
     def btn_multiplicar_on_click(self):
-        pass
+        numero_uno_texto = self.txt_operador_a.get()
+        numero_uno_a_numero = int(numero_uno_texto)
 
+        numero_dos_texto = self.txt_operador_b.get()
+        numero_dos_a_numero= int(numero_dos_texto)
+
+        resultado = numero_uno_a_numero * numero_dos_a_numero
+
+        resultado_a_texto = str(resultado)
+        mensaje= "El resultado de la multiplicación es: " + resultado_a_texto # este + se deja porque no esta "sumando" esta concatenando
+
+        alert(title="multiplicació",message=mensaje)
+
+        #               DIVISIÓN
     def btn_dividir_on_click(self):
-        pass
+        numero_uno_texto = self.txt_operador_a.get()
+        numero_uno_a_numero = int(numero_uno_texto)
+
+        numero_dos_texto = self.txt_operador_b.get()
+        numero_dos_a_numero= int(numero_dos_texto)
+
+        resultado = numero_uno_a_numero / numero_dos_a_numero
+
+        resultado_a_texto = str(resultado)
+        mensaje= "El resultado de la División es: " + resultado_a_texto # este + se deja porque no esta "sumando" esta concatenando
+
+        alert(title="División",message=mensaje)
         
 if __name__ == "__main__":
     app = App()

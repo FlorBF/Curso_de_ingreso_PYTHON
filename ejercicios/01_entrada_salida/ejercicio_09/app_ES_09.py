@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: florencia belen 
+apellido: farías
 ---
 Ejercicio: entrada_salida_09
 ---
@@ -40,7 +40,49 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+
+        sueldo_texto = self.txt_sueldo.get()
+        incremento_texto = self.txt_incremento.get()
+        #float para convertir texto en flotante (numeros con (,) ej: 12.3)
+        sueldo_numero = float(sueldo_texto)
+        incremento_numero =  float(incremento_texto)
+
+        incremento_pesos = sueldo_numero * incremento_numero / 100
+        sueldo_resultado_numero = sueldo_numero + incremento_pesos
+        #mostrar el importe de sueldo actualizado con el incremento porcentual utilizando el Dialog Alert.
+        alert("sueldo", f"El sueldo actualizado es: {sueldo_resultado_numero}")
+
+
+
+
+
+    
+'''  EJEMPLO DEL PROFE
+     
+      PRECIO = 1000
+                #AUMENTO
+           #porcentaje= PRECIO * 0.10
+        #aumento = PRECIO* 10 / 100 #muestra el aumento
+        #se agrega un punto .10 y luego el desimal ej: 1.10
+
+        #precio_final = PRECIO + aumento
+        precio_final = PRECIO * 1.10 #esto solo muestra el resultado final
+
+                #DESCUENTO
+        descuento = PRECIO * 10/100
+        precio_final = PRECIO - descuento
+        precio_final = PRECIO * 1.10
+
+        #si necesito sacarle al 100 porciento 10 porciento 
+        #100 - 10 = 90 al 100 porciento le resto 0.10
+        precio_final = PRECIO * 0.90
+
+        #el float o flotantes, son los reales ej 10.5 - 0.5- 100.9999
+        # el int son numeros enteros, convierte texto en numeros enterosnumeros enteros
+        '''
+       
+
+
         
     
 if __name__ == "__main__":

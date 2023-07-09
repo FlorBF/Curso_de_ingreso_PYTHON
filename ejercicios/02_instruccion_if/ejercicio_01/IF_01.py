@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Florencia belen
+apellido: farías
 ---
 Ejercicio: instrucion_if_01
 ---
@@ -34,7 +34,27 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        # 2 valores disponibles: true / false
+        #numero = promp ("numero" , "ingrese un numero") ingresar por promp solo si me lo pide, si es por caja de texto no
+        edad = self.txt_edad.get() #str
+        edad = int(edad) 
+               #si es verdadera
+        if edad == 18:
+            mensaje = "Usted tiene 18 años"
+        
+            alert("Edad", mensaje)  #el aler debe estar dentro del if a la altura de msj
+
+            #respetar los espacios de los operadores = < > etc
+        #NOTA: si es falso
+       # else:
+           #mensaje = "No es mayor a 10"
+
+          
+
+
+
+
+       # pass
 
         
         
