@@ -36,10 +36,10 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         # 2 valores disponibles: true / false
         #numero = promp ("numero" , "ingrese un numero") ingresar por promp solo si me lo pide, si es por caja de texto no
-        edad = self.txt_edad.get() #str
-        edad = int(edad) 
+        edad_texto = self.txt_edad.get() #str
+        edad_a_num = int(edad_texto) 
                #si es verdadera
-        if edad == 18:
+        if edad_a_num == 18:
             mensaje = "Usted tiene 18 años"
         
             alert("Edad", mensaje)  #el aler debe estar dentro del if a la altura de msj
