@@ -38,7 +38,6 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         #calcular si es MAYOR, NIÑO/A(menor de 10) o PRE ADOLESCENTE 
         # (edad entre 10 y 13 años) o ADOLESCENTE (edad entre 13 y 17 años) de edad
-        
         edad_texto = self.txt_edad.get () 
         edad_num = int(edad_texto)
         #si...
@@ -55,11 +54,12 @@ class App(customtkinter.CTk):
             mensaje="ADOLESCENTE"
 
         alert(title="Contenido", message= mensaje)
+        
+
+
+
+
             
-
-
-
-        #pass
 
         
         
