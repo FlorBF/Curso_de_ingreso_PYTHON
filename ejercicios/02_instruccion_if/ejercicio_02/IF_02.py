@@ -43,11 +43,6 @@ class App(customtkinter.CTk):
             alert(title="Edad", message="MAYOR")
 
 
-        
-       
-
-        
-        
     
 if __name__ == "__main__":
     app = App()

@@ -38,7 +38,10 @@ class App(customtkinter.CTk):
         #numero = promp ("numero" , "ingrese un numero") ingresar por promp solo si me lo pide, si es por caja de texto no
         edad_texto = self.txt_edad.get() #str
         edad_a_num = int(edad_texto) 
+
+        #si no paso a numero, queda if(edad_texto == "18"):
                #si es verdadera
+        #asi se pone cuando paso el texto a numero:       
         if edad_a_num == 18:
             mensaje = "Usted tiene 18 años"
         
@@ -49,16 +52,7 @@ class App(customtkinter.CTk):
        # else:
            #mensaje = "No es mayor a 10"
 
-          
-
-
-
-
-       # pass
-
-        
-        
-    
+       
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
